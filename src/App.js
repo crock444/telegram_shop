@@ -9,9 +9,7 @@ function App() {
         tg.ready();
     }, []);
 
-    const ocClose =() =>{
-        tg.close()
-    }
+
 
   return (
     <div className="App">
