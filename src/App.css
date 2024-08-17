@@ -103,3 +103,20 @@ button:active {
   padding: 5px; /* Отступы вокруг текста */
   border-radius: 4px; /* Скругленные углы фона */
 }
+
+.product-card-title {
+  font-size: 16px; /* Размер шрифта для заголовка */
+  font-weight: bold; /* Жирный шрифт для заголовка */
+  margin: 10px 0; /* Отступы сверху и снизу */
+}
+
+.product-card {
+  border: 1px solid #ddd; /* Светлый бордер */
+  border-radius: 8px; /* Скругленные углы */
+  overflow: hidden; /* Обрезка содержимого по границам */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для эффекта */
+  background-color: #fff; /* Белый фон карточки */
+  width: 200px; /* Ширина карточки */
+  text-align: center; /* Центрирование текста */
+  padding: 10px; /* Отступы внутри карточки */
+}
