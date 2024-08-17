@@ -2,7 +2,7 @@ import './App.css';
 import React, { useState } from "react";
 import { useTelegram } from "./hooks/useTelegram";
 import Header from "./components/Header/Header";
-import SplashScreen from "./components/SplashScreen";
+import SplashScreen from "./components/SplashScreen/SplashScreen";
 
 function App() {
     const { onToggleButton, tg } = useTelegram();
