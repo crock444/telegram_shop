@@ -1,25 +1,28 @@
+// src/App.js
 import './App.css';
-import {useEffect} from "react";
-import {useTelegram} from "./hooks/useTelegram";
-
-
-
-
+import React, { useState } from "react";
+import { useTelegram } from "./hooks/useTelegram";
+import Header from "./components/Header/Header";
+import SplashScreen from "./components/SplashScreen";
 
 function App() {
-    const {onToggleButton, tg} =useTelegram();
+    const { onToggleButton, tg } = useTelegram();
+    const [isSplashVisible, setSplashVisible] = useState(true);
 
-
-    useEffect(() => {
-        tg.ready();
-    }, []);
+    const handleSplashAnimationEnd = () => {
+        setSplashVisible(false);
+    };
 
     return (
         <div className="App">
-
-            <button onClick={onToggleButton}>toggle</button>
+            {isSplashVisible && <SplashScreen onAnimationEnd={handleSplashAnimationEnd} />}
+            <div style={{ display: isSplashVisible ? 'none' : 'block' }}>
+                <Header />
+                <button onClick={onToggleButton}>toggle</button>
+            </div>
         </div>
     );
 }
 
 export default App;
+
