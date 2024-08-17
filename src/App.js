@@ -15,11 +15,12 @@ function App() {
     return (
         <div className="App">
             {isSplashVisible && <SplashScreen onAnimationEnd={handleSplashAnimationEnd} />}
-            <div style={{ display: isSplashVisible ? 'none' : 'block' }}>
+            <div style={{display: isSplashVisible ? 'none' : 'block'}}>
                 <div className="header">
-                    <h1 className="header-title">REEDROP</h1>
-                    <button onClick={onToggleButton}>Toggle</button>
+                    <div className="header-title">REEDROP</div>
+                    <button className="header-button">Button</button>
                 </div>
+
             </div>
         </div>
     );
