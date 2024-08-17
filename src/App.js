@@ -1,31 +1,46 @@
-// src/App.js
+// src/App.jsx
+import React from 'react';
+import ProductCard from './components/ProductCard/ProductCard';
 import './App.css';
-import React, { useState } from "react";
-import { useTelegram } from "./hooks/useTelegram";
-import SplashScreen from "./components/SplashScreen/SplashScreen";
 
-function App() {
-    const { onToggleButton, tg } = useTelegram();
-    const [isSplashVisible, setSplashVisible] = useState(true);
+const products = [
+    {
+        image: 'path-to-product-image1.jpg',
+        title: 'Product 1',
+        price: '19.99',
+    },
+    {
+        image: 'path-to-product-image2.jpg',
+        title: 'Product 2',
+        price: '29.99',
+    },
+    // Добавьте больше продуктов по необходимости
+];
 
-    const handleSplashAnimationEnd = () => {
-        setSplashVisible(false);
-    };
-
+const App = () => {
     return (
-        <div className="App">
-            {isSplashVisible && <SplashScreen onAnimationEnd={handleSplashAnimationEnd} />}
-            <div style={{display: isSplashVisible ? 'none' : 'block'}}>
-                <div className="header">
-                    <div className="header-content">
-                        <div className="header-title">REEDROP</div>
-                    </div>
-                    <button className="header-button">Button</button>
+        <>
+            <header className="header">
+                <h1 className="header-title">REEDROP</h1>
+                <button className="header-button">Button</button>
+            </header>
+            <div className="app">
+                <div className="product-list">
+                    {products.map((product, index) => (
+                        <ProductCard
+                            key={index}
+                            image={product.image}
+                            title={product.title}
+                            price={product.price}
+                        />
+                    ))}
                 </div>
             </div>
-        </div>
+        </>
     );
-}
+};
 
 export default App;
+
+
 

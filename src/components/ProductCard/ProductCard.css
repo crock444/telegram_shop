@@ -1,0 +1,42 @@
+/* src/components/ProductCard/ProductCard.css */
+.product-card {
+    border: 1px solid #ddd; /* Легкая граница вокруг карточки */
+    border-radius: 8px; /* Скругленные углы */
+    overflow: hidden; /* Обеспечивает, что содержимое не выходит за границы карточки */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для эффекта подъема */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Плавные переходы для эффектов */
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: scale(1.03); /* Увеличение при наведении */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Увеличенная тень при наведении */
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Обеспечивает, что изображение заполняет пространство без искажения */
+}
+
+.product-info {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирование текста по горизонтали */
+}
+
+.product-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: center; /* Центрирование заголовка */
+}
+
+.product-price {
+    font-size: 16px;
+    color: #007bff; /* Цвет текста цены */
+    margin: 0;
+}
+

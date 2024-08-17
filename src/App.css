@@ -1,14 +1,19 @@
+/* src/App.css */
+
+/* Общие стили для всех элементов */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Стили для body */
 body {
   background: var(--tg-theme-bg-color);
   color: var(--tg-theme-text-color);
 }
 
+/* Стили для кнопок */
 button {
   background-color: #007bff; /* Синий цвет кнопки */
   border: none;
@@ -32,9 +37,9 @@ button:active {
   transform: scale(0.98); /* Немного уменьшить размер при нажатии */
 }
 
-/* Стили для шапки и текста */
+/* Стили для шапки */
 .header {
-  position: fixed;
+  position: fixed; /* Фиксированное позиционирование */
   top: 0;
   left: 0;
   width: 100%;
@@ -51,11 +56,10 @@ button:active {
 .header-content {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-grow: 1; /* Занимает оставшееся пространство между заголовком и кнопкой */
+  flex-grow: 1;
 }
 
-/* Заголовок */
+/* Заголовок в шапке */
 .header-title {
   color: white; /* Цвет текста */
   font-weight: bold; /* Жирный шрифт */
@@ -63,8 +67,22 @@ button:active {
   margin: 0; /* Удаление стандартных отступов у заголовка */
 }
 
-/* Кнопка */
+/* Кнопка в шапке */
 .header-button {
   margin-right: 20px; /* Отступ справа, чтобы кнопка была ближе к краю */
 }
 
+/* Стили для основного содержимого */
+.app {
+  padding: 20px;
+  padding-top: 60px; /* Отступ сверху для основного содержимого, чтобы оно не перекрывалось шапкой */
+  background: var(--tg-theme-bg-color); /* Или другой фон по вашему выбору */
+}
+
+/* Стили для списка продуктов */
+.product-list {
+  display: flex;
+  flex-wrap: wrap; /* Чтобы карточки переходили на следующую строку при необходимости */
+  gap: 16px; /* Расстояние между карточками */
+  justify-content: center; /* Центрирование карточек по горизонтали */
+}
