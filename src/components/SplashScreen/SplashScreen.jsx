@@ -9,12 +9,12 @@ const SplashScreen = ({ onAnimationEnd }) => {
         // Показать SplashScreen на 4 секунды
         const timer = setTimeout(() => {
             setIsVisible(false);
-        }, 3000); // 3 секунды
+        }, 2000); // 3 секунды
 
         // Скрытие SplashScreen с задержкой для анимации
         const hideTimer = setTimeout(() => {
             onAnimationEnd();
-        }, 4000); // 4 секунды, чтобы совпало с временем анимации
+        }, 2000); // 4 секунды, чтобы совпало с временем анимации
 
         return () => {
             clearTimeout(timer);

@@ -20,3 +20,30 @@
 .splash-screen.fade-out {
     opacity: 0;
 }
+
+/* Добавляем стили для логотипа */
+.splash-screen img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Логотип для больших экранов (десктопы) */
+@media (min-width: 1024px) {
+    .splash-screen img {
+        width: 200px; /* Размер логотипа для больших экранов */
+    }
+}
+
+/* Логотип для средних экранов (планшеты) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .splash-screen img {
+        width: 150px; /* Размер логотипа для планшетов */
+    }
+}
+
+/* Логотип для маленьких экранов (моб. телефоны) */
+@media (max-width: 767px) {
+    .splash-screen img {
+        width: 100px; /* Размер логотипа для мобильных телефонов */
+    }
+}
