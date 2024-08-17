@@ -1,6 +1,6 @@
 // src/components/SplashScreen.js
 import React, { useEffect, useState } from 'react';
-import './SplashScreen.css'; // Убедитесь, что CSS подключен правильно
+import './SplashScreen.css';
 
 const SplashScreen = ({ onAnimationEnd }) => {
     const [isVisible, setIsVisible] = useState(true);
@@ -9,7 +9,7 @@ const SplashScreen = ({ onAnimationEnd }) => {
         const timer = setTimeout(() => {
             setIsVisible(false);
             onAnimationEnd();
-        }, 1000); // Задержка в 1 секунду
+        }, 1000); // 1 секунда
 
         return () => clearTimeout(timer);
     }, [onAnimationEnd]);
