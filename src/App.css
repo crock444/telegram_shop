@@ -1,20 +1,19 @@
+/* src/App.css */
+
+/* Общие стили для всех элементов */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Стили для body */
 body {
   background: var(--tg-theme-bg-color);
   color: var(--tg-theme-text-color);
 }
 
-.app {
-  padding: 20px;
-  padding-top: 60px; /* Отступ сверху для основного содержимого, чтобы оно не перекрывалось шапкой */
-  background: var(--tg-theme-bg-color); /* Или другой фон по вашему выбору */
-}
-
+/* Стили для кнопок */
 button {
   background-color: #007bff; /* Синий цвет кнопки */
   border: none;
@@ -38,8 +37,7 @@ button:active {
   transform: scale(0.98); /* Немного уменьшить размер при нажатии */
 }
 
-/* Стили для шапки и текста */
-/* src/App.css */
+/* Стили для шапки */
 .header {
   position: fixed; /* Фиксированное позиционирование */
   top: 0;
@@ -54,6 +52,14 @@ button:active {
   z-index: 1000; /* Убедитесь, что шапка выше других элементов */
 }
 
+/* Контейнер для заголовка и кнопки */
+.header-content {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+/* Заголовок в шапке */
 .header-title {
   color: white; /* Цвет текста */
   font-weight: bold; /* Жирный шрифт */
@@ -61,16 +67,19 @@ button:active {
   margin: 0; /* Удаление стандартных отступов у заголовка */
 }
 
+/* Кнопка в шапке */
 .header-button {
   margin-right: 20px; /* Отступ справа, чтобы кнопка была ближе к краю */
 }
 
+/* Стили для основного содержимого */
 .app {
-  margin-top: 60px; /* Отступ сверху для основного содержимого, чтобы оно не перекрывалось шапкой */
   padding: 20px;
+  padding-top: 60px; /* Отступ сверху для основного содержимого, чтобы оно не перекрывалось шапкой */
   background: var(--tg-theme-bg-color); /* Или другой фон по вашему выбору */
 }
 
+/* Стили для списка продуктов */
 .product-list {
   display: flex;
   flex-wrap: wrap; /* Чтобы карточки переходили на следующую строку при необходимости */
@@ -78,33 +87,10 @@ button:active {
   justify-content: center; /* Центрирование карточек по горизонтали */
 }
 
-
-/* Контейнер для заголовка и кнопки */
-.header-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 1;
+/* Стили для изображений в карточке товара */
+.product-card img {
+  width: 100%; /* Занимает 100% ширины родительского контейнера */
+  height: 200px; /* Фиксированная высота для всех изображений */
+  object-fit: cover; /* Обрезает изображение, чтобы заполнить контейнер, сохраняя пропорции */
 }
 
-/* Заголовок */
-.header-title {
-  color: white;
-  font-weight: bold;
-  font-size: 24px;
-  margin: 0;
-}
-
-/* Кнопка */
-.header-button {
-  margin-right: 20px;
-}
-
-
-
-.product-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
-}
