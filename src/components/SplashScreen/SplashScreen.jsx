@@ -6,20 +6,29 @@ const SplashScreen = ({ onAnimationEnd }) => {
     const [isVisible, setIsVisible] = useState(true);
 
     useEffect(() => {
+        // Показать SplashScreen на 4 секунды
         const timer = setTimeout(() => {
             setIsVisible(false);
-            onAnimationEnd();
-        }, 1000); // 1 секунда
+        }, 3000); // 3 секунды
 
-        return () => clearTimeout(timer);
+        // Скрытие SplashScreen с задержкой для анимации
+        const hideTimer = setTimeout(() => {
+            onAnimationEnd();
+        }, 4000); // 4 секунды, чтобы совпало с временем анимации
+
+        return () => {
+            clearTimeout(timer);
+            clearTimeout(hideTimer);
+        };
     }, [onAnimationEnd]);
 
     return (
         <div className={`splash-screen ${isVisible ? 'fade-in' : 'fade-out'}`}>
-            <img src="/logo.jpg" alt="Logo" />
+            <img src="/logo.png" alt="Logo" />
         </div>
     );
 };
 
 export default SplashScreen;
+
 
