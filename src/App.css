@@ -47,13 +47,24 @@ button:active {
   z-index: 1000; /* Убедитесь, что шапка выше других элементов */
 }
 
+/* Контейнер для заголовка и кнопки */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1; /* Занимает оставшееся пространство между заголовком и кнопкой */
+}
+
+/* Заголовок */
 .header-title {
   color: white; /* Цвет текста */
   font-weight: bold; /* Жирный шрифт */
   font-size: 24px; /* Размер шрифта */
-  margin-top: 10px; /* Отступ сверху */
+  margin: 0; /* Удаление стандартных отступов у заголовка */
 }
 
+/* Кнопка */
 .header-button {
   margin-right: 20px; /* Отступ справа, чтобы кнопка была ближе к краю */
 }
+

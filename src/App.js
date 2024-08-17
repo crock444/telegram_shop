@@ -17,10 +17,11 @@ function App() {
             {isSplashVisible && <SplashScreen onAnimationEnd={handleSplashAnimationEnd} />}
             <div style={{display: isSplashVisible ? 'none' : 'block'}}>
                 <div className="header">
-                    <div className="header-title">REEDROP</div>
+                    <div className="header-content">
+                        <div className="header-title">REEDROP</div>
+                    </div>
                     <button className="header-button">Button</button>
                 </div>
-
             </div>
         </div>
     );
