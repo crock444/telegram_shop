@@ -22,7 +22,7 @@ const App = () => {
         <>
             <header className="header">
                 <h1 className="header-title">REEDROP</h1>
-                <button className="header-button">Button</button>
+                <button className="header-button"></button>
             </header>
             <div className="app">
                 <div className="product-list">

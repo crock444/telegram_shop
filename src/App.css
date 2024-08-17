@@ -94,3 +94,12 @@ button:active {
   object-fit: cover; /* Обрезает изображение, чтобы заполнить контейнер, сохраняя пропорции */
 }
 
+.product-card-price {
+  color: white; /* Белый цвет текста цены */
+  font-size: 18px; /* Размер шрифта для цены */
+  font-weight: bold; /* Жирный шрифт для цены */
+  margin-top: 10px; /* Отступ сверху */
+  background-color: #000; /* Черный фон для контраста */
+  padding: 5px; /* Отступы вокруг текста */
+  border-radius: 4px; /* Скругленные углы фона */
+}
