@@ -7,12 +7,12 @@ const products = [
     {
         image: '/images/fors1.jpeg',
         title: 'Nike Tiffany',
-        price: '500',
+        price: '250.000',
     },
     {
         image: '/images/fors2.png',
         title: 'Nike SB Dunk Low',
-        price: '250',
+        price: '120.000',
     },
     // Добавьте больше продуктов по необходимости
 ];
