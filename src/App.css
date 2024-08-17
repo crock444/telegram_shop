@@ -1,19 +1,20 @@
-/* src/App.css */
-
-/* Общие стили для всех элементов */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Стили для body */
 body {
   background: var(--tg-theme-bg-color);
   color: var(--tg-theme-text-color);
 }
 
-/* Стили для кнопок */
+.app {
+  padding: 20px;
+  padding-top: 60px; /* Отступ сверху для основного содержимого, чтобы оно не перекрывалось шапкой */
+  background: var(--tg-theme-bg-color); /* Или другой фон по вашему выбору */
+}
+
 button {
   background-color: #007bff; /* Синий цвет кнопки */
   border: none;
@@ -37,7 +38,8 @@ button:active {
   transform: scale(0.98); /* Немного уменьшить размер при нажатии */
 }
 
-/* Стили для шапки */
+/* Стили для шапки и текста */
+/* src/App.css */
 .header {
   position: fixed; /* Фиксированное позиционирование */
   top: 0;
@@ -52,14 +54,6 @@ button:active {
   z-index: 1000; /* Убедитесь, что шапка выше других элементов */
 }
 
-/* Контейнер для заголовка и кнопки */
-.header-content {
-  display: flex;
-  align-items: center;
-  flex-grow: 1;
-}
-
-/* Заголовок в шапке */
 .header-title {
   color: white; /* Цвет текста */
   font-weight: bold; /* Жирный шрифт */
@@ -67,19 +61,16 @@ button:active {
   margin: 0; /* Удаление стандартных отступов у заголовка */
 }
 
-/* Кнопка в шапке */
 .header-button {
   margin-right: 20px; /* Отступ справа, чтобы кнопка была ближе к краю */
 }
 
-/* Стили для основного содержимого */
 .app {
+  margin-top: 60px; /* Отступ сверху для основного содержимого, чтобы оно не перекрывалось шапкой */
   padding: 20px;
-  padding-top: 60px; /* Отступ сверху для основного содержимого, чтобы оно не перекрывалось шапкой */
   background: var(--tg-theme-bg-color); /* Или другой фон по вашему выбору */
 }
 
-/* Стили для списка продуктов */
 .product-list {
   display: flex;
   flex-wrap: wrap; /* Чтобы карточки переходили на следующую строку при необходимости */
@@ -87,36 +78,33 @@ button:active {
   justify-content: center; /* Центрирование карточек по горизонтали */
 }
 
-/* Стили для изображений в карточке товара */
-.product-card img {
-  width: 100%; /* Занимает 100% ширины родительского контейнера */
-  height: 200px; /* Фиксированная высота для всех изображений */
-  object-fit: cover; /* Обрезает изображение, чтобы заполнить контейнер, сохраняя пропорции */
+
+/* Контейнер для заголовка и кнопки */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
 }
 
-.product-card-price {
-  color: white; /* Белый цвет текста цены */
-  font-size: 18px; /* Размер шрифта для цены */
-  font-weight: bold; /* Жирный шрифт для цены */
-  margin-top: 10px; /* Отступ сверху */
-  background-color: #000; /* Черный фон для контраста */
-  padding: 5px; /* Отступы вокруг текста */
-  border-radius: 4px; /* Скругленные углы фона */
+/* Заголовок */
+.header-title {
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0;
 }
 
-.product-card-title {
-  font-size: 16px; /* Размер шрифта для заголовка */
-  font-weight: bold; /* Жирный шрифт для заголовка */
-  margin: 10px 0; /* Отступы сверху и снизу */
+/* Кнопка */
+.header-button {
+  margin-right: 20px;
 }
 
-.product-card {
-  border: 1px solid #ddd; /* Светлый бордер */
-  border-radius: 8px; /* Скругленные углы */
-  overflow: hidden; /* Обрезка содержимого по границам */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для эффекта */
-  background-color: #fff; /* Белый фон карточки */
-  width: 200px; /* Ширина карточки */
-  text-align: center; /* Центрирование текста */
-  padding: 10px; /* Отступы внутри карточки */
+
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
 }
