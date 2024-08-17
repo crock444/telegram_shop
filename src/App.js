@@ -5,14 +5,14 @@ import './App.css';
 
 const products = [
     {
-        image: 'path-to-product-image1.jpg',
-        title: 'Product 1',
-        price: '19.99',
+        image: '/images/fors1.jpeg',
+        title: 'Nike Tiffany',
+        price: '500',
     },
     {
-        image: 'path-to-product-image2.jpg',
-        title: 'Product 2',
-        price: '29.99',
+        image: '/images/fors2.png',
+        title: 'Nike SB Dunk Low',
+        price: '250',
     },
     // Добавьте больше продуктов по необходимости
 ];
