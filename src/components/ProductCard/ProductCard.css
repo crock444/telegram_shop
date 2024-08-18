@@ -30,12 +30,12 @@
     font-family: "Fira Code Light", sans-serif;
 }
 
-/* Удалите эффект увеличения при наведении, чтобы сделать карточку статичной */
 .product-card:hover {
     transform: none; /* Убирает масштабирование при наведении */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Убирает увеличение тени при наведении */
 }
 
+/* Стили для основной кнопки "Добавить" */
 .add-to-cart-button {
     margin-top: auto; /* Отодвигает кнопку к низу карточки */
     padding: 8px 16px;
@@ -51,3 +51,44 @@
 .add-to-cart-button:hover {
     background-color: #0056b3; /* Темнее синий цвет при наведении */
 }
+
+/* Стили для контейнера кнопок "+" и "-" */
+.quantity-controls {
+    display: flex;
+    align-items: center; /* Вертикальное выравнивание элементов по центру */
+    justify-content: center; /* Центрирование кнопок по горизонтали */
+    gap: 8px; /* Отступ между кнопками */
+    margin-top: auto; /* Отодвигает блок кнопок к низу карточки */
+}
+
+/* Стили для кнопок "+" и "-" */
+.quantity-button {
+    width: 30px; /* Фиксированная ширина кнопок */
+    height: 30px; /* Фиксированная высота кнопок */
+    font-size: 18px; /* Размер шрифта для кнопок */
+    color: #fff;
+    background-color: #007bff; /* Синий цвет кнопок */
+    border: none;
+    border-radius: 50%; /* Круглая форма кнопок */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.quantity-button:hover {
+    background-color: #0056b3; /* Темнее синий цвет при наведении */
+}
+
+/* Стили для счетчика количества */
+.quantity-display {
+    font-family: "Fira Code Light";
+    font-size: 18px; /* Размер шрифта для счетчика */
+    width: 45px; /* Ширина счетчика */
+    height: 30px; /* Высота счетчика, чтобы соответствовать кнопкам */
+    color: #fff;
+    text-align: center; /* Выравнивание текста по центру */
+    background-color: #007bff; /* Цвет фона счетчика */
+    border-radius: 4px; /* Скругленные углы */
+    padding: 5px; /* Внутренние отступы для лучшего вида */
+}
+
+
