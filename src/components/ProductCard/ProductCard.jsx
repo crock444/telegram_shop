@@ -5,9 +5,10 @@ import './ProductCard.css'; // Убедитесь, что путь к CSS пра
 const ProductCard = ({ image, title, price }) => {
     return (
         <div className="product-card">
-            <img src={image} alt={title} />
+            <img src={image} alt={title}/>
             <h2>{title}</h2>
-            <b><p>Купить за {price} ₽</p></b>
+            <b><p>Цена: {price} ₽</p></b>
+            <button className="add-to-cart-button">Добавить</button>
         </div>
     );
 };
