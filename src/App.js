@@ -9,6 +9,7 @@ const products = [
         image: '/images/fors1.jpeg',
         title: 'Nike Tiffany',
         price: '250.000',
+
     },
     {
         image: '/images/fors2.png',
