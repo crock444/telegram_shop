@@ -1,35 +1,34 @@
 .cart-button {
-    position: fixed; /* Используйте фиксированное позиционирование для закрепления кнопки */
-    bottom: 20px; /* Отступ от нижнего края */
-    right: 20px; /* Отступ от правого края */
-    width: 50px; /* Ширина кнопки */
-    height: 50px; /* Высота кнопки */
-    background-color: #007bff; /* Синий цвет кнопки */
-    border-radius: 50%; /* Круглая форма кнопки */
-    display: flex; /* Используем Flexbox для центрирования содержимого */
-    align-items: center; /* Вертикальное центрирование */
-    justify-content: center; /* Горизонтальное центрирование */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Легкая тень */
-    cursor: pointer; /* Курсор указателя при наведении */
-    z-index: 1000; /* Убедитесь, что кнопка выше других элементов */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('./images/cart-icon.png'); /* Убедитесь, что путь правильный */
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
 }
 
 .cart-button .cart-count {
-    position: absolute; /* Позиционирование относительно кнопки */
-    top: -10px; /* Отступ сверху */
-    right: -10px; /* Отступ справа */
-    background-color: #fff; /* Белый цвет фона для счетчика */
-    color: #007bff; /* Синий цвет текста счетчика */
-    border-radius: 50%; /* Круглая форма счетчика */
-    padding: 2px 6px; /* Внутренние отступы */
-    font-size: 14px; /* Размер шрифта */
-    font-weight: bold; /* Жирный шрифт */
-    min-width: 20px; /* Минимальная ширина счетчика */
-    text-align: center; /* Центрирование текста */
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #fff;
+    color: #007bff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 14px;
+    font-weight: bold;
+    min-width: 20px;
+    text-align: center;
 }
 
-.cart-button img {
-    width: 24px; /* Ширина изображения */
-    height: 24px; /* Высота изображения */
-    object-fit: contain; /* Сохраняет пропорции изображения и вписывает его в контейнер */
-}

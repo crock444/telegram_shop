@@ -7,7 +7,8 @@ const ProductCard = ({ productId, image, title, price, onCartCountChange }) => {
     const handleAddClick = () => {
         setQuantity(prevQuantity => {
             const newQuantity = prevQuantity + 1;
-            onCartCountChange(productId, 1); // Передаем идентификатор продукта и увеличиваем количество
+            console.log('Добавление: ', newQuantity);
+            onCartCountChange(productId, 1);
             return newQuantity;
         });
     };
@@ -15,10 +16,12 @@ const ProductCard = ({ productId, image, title, price, onCartCountChange }) => {
     const handleDecreaseClick = () => {
         setQuantity(prevQuantity => {
             const newQuantity = Math.max(0, prevQuantity - 1);
-            onCartCountChange(productId, -1); // Передаем идентификатор продукта и уменьшаем количество
+            console.log('Уменьшение: ', newQuantity);
+            onCartCountChange(productId, -1);
             return newQuantity;
         });
     };
+
 
     return (
         <div className="product-card">
